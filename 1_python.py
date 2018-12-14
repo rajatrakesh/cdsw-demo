@@ -1,4 +1,4 @@
-# Google Stock Analytics
+ # Google Stock Analytics
 # ======================
 #
 # This notebook implements a strategy that uses Google Trends data to

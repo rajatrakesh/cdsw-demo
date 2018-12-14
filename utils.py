@@ -12,8 +12,8 @@ def start_tensorboard(logdir="/tmp/tensorboard", iframe=True):
   if not process:
     process = subprocess.Popen(cmd)
     time.sleep(3)    
-  url = "http://{id}.{domain}".format(id=os.environ['CDSW_ENGINE_ID'], domain=os.environ['CDSW_DOMAIN'])
-  print "Starting Tensorboard at {url}...".format(url=url)
+  url = "https://{id}.{domain}".format(id=os.environ['CDSW_ENGINE_ID'], domain=os.environ['CDSW_DOMAIN'])
+  print ("Starting Tensorboard at {url}...".format(url=url))
   if iframe:
     html = """
       <p><a href="{url}">Open Tensorboard</a></p>
@@ -30,7 +30,7 @@ def stop_tensorboard():
   global process
   if process: 
     process.terminate()
-    print "Tensorboard stopped."
+    print ("Tensorboard stopped.")
     process = False
   else:
-    print "Tensorboard is not running."
+    print ("Tensorboard is not running.")
