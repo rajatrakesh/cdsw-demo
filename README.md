@@ -62,7 +62,7 @@ Create a new project using this GitHub project as your initial setup. The projec
 
 Open the Workbench and start a new Python2 Session, then run the following command to install some required libraries:
 ```
-!pip2 install --upgrade pip dask keras matplotlib pandas_highcharts protobuf tensorflow seaborn
+!pip2 install --upgrade pip dask keras matplotlib pandas_highcharts protobuf tensorflow seaborn sklearn
 ```
 Please note: as libraries are updated, dependancies might break: please check the output log and fix the dependancies. For example, you might have to install a specific version of setuptools or numpy for tensorflow to install properly.
 
