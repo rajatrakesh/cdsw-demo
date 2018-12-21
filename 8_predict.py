@@ -8,5 +8,5 @@ model = pickle.load(open('petalWidthModel.pkl', 'rb'))
 
 def predict(args):
   iris_x = float(args.get('petal_length'))
-  result = model.predict(iris_x)
+  result = model.predict([[iris_x]])
   return result[0][0]
