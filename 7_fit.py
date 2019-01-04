@@ -7,9 +7,10 @@ from sklearn import datasets, linear_model
 from sklearn.metrics import mean_squared_error, r2_score
 import pickle
 import cdsw
-
 import matplotlib.pyplot as plt
+import sys
 
+sys.path.append("/home/cdsw")
 
 iris = datasets.load_iris()
 test_size = 20
