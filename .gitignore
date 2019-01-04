@@ -1,5 +1,4 @@
 .*
-*.pkl
 *.pyc
 
 # Dont ignore .gitignore (this file)
