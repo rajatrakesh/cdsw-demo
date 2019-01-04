@@ -3,9 +3,6 @@
 # predict petal width from petal length
 
 import pickle
-import sys
-
-sys.path.append("/home/cdsw")
 
 model = pickle.load(open('petalWidthModel.pkl', 'rb'))
 
