@@ -114,7 +114,7 @@ Run a few experiments using file `6_experiment.py` as Script and any space separ
 
 ### 2.4. Models
 
-In a Python2 workbench, run code `7_fit.py`. The code builds a model to predict the width of a petal from its length. The code uses a built-in dataset to train the model, but you should think of it as reading the raw data from a Hadoop cluster. The model is then saved as file petalWidthModel.pkl.
+In a Python3 workbench, run code `7_fit.py`. The code builds a model to predict the width of a petal from its length. The code uses a built-in dataset to train the model, but you should think of it as reading the raw data from a Hadoop cluster. The model is then saved as file petalWidthModel.pkl.
 
 Create a new Model using Script `8_predict.py` using function `predict`. The code loads the model previously saved and allows you to pass an argument, 'petal_length'. CDSW deploys the model and provides you with REST APIs to call the model. Try by sending 
 
