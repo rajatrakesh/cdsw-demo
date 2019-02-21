@@ -2,63 +2,7 @@
 
 Basic tour of Cloudera Data Science Workbench (CDSW).
 
-## 1. Platform Overview
-
-### 1.1. Architecture
-
-*TODO* 
-- relationship with CDH, 
-- admin account, 
-- kubernates and docker, 
-- engines (Mem, CPUs and GPUs).
-
-### 1.2. Website - User Interface
-Upon login into CDSW, you are presented with the Projects page. On the left menu, you have 6 tabs:
-
-**Projects**
-List of all your open Projects, plus on the top you have a quick glance at stats and available resources in the CDSW cluster. 
-
-**Sessions**
-List of all your open and closed Sessions. A Session is a compute environment loaded with Python/R/Scala libraries and with access to the filesystem.
-
-**Experiments**
-List of all Experiments run and the collected metrics. 
-
-**Models**
-List of all deployed Models.
-
-**Jobs**
-List of all Jobs run across all your projects.
-
-**Settings**
-The Settings page gives you access to:
-- your Profile information.
-- SSH Keys.
-- Hadoop Authentication via Kerberos.
-- API Keys.
-
-
-## 2. Demo Excercises
-
-### 2.1. Initial setup
-
-Create a new project using this GitHub project as your initial setup. The project main page is presented to you. Here you have 8 tabs:
-
-**Overview**: quick overview of the project, including displaying the README.md file.
-
-**Sessions**: list of open session for this project.
-
-**Experiments**: list of project experimets. 
-
-**Models**: list of deployed project models
-
-**Jobs**: list of project jobs
-
-**Files**: list of files included in this project.
-
-**Team**: this page allows you to add collaborators to this project.
-
-**Settings**: this page allows you to select the Engine, set the visibility, and delete the project.
+## Initial setup
 
 Open the Workbench and start a new Python2 Session, then run the following command to install some required libraries:
 ```
@@ -84,7 +28,7 @@ install.packages('shiny')
 
 Stop and restart all sessions for changes to take effect.
 
-### 2.2. Workbench
+## Workbench
 
 In the project you'll find 4 scripts which walk you through the interactive capabilities of CDSW.
 
@@ -106,9 +50,6 @@ In the project you'll find 4 scripts which walk you through the interactive capa
 `5_shiny.R` demonstrates:
   - Use of shiny to provide interactive graphics inside CDSW
 
-*TODO: add scala example*
-
-### 2.3. Experiments
 
 ## Experiment
 
@@ -266,7 +207,7 @@ directory.
 
 
 
-### 2.3. Models
+## Models
 
 
 Starting with version 1.4, Cloudera Data Science Workbench allows data scientists to build, deploy, 
@@ -367,7 +308,7 @@ With these input parameters, the model returns 0, which mean that the customer i
 
 
 
-### 2.5. Jobs
+## Jobs
 
 CDSW allows you to schedule a job - run some code - at a specific time or interval. For example, you can schedule `7_fit.py` to run every week on new data that you have collected, so that the model it builds becomes more precise with the updated data.
-*TODO examples*
+
