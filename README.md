@@ -94,11 +94,11 @@ and metadata, each experiment is executed in an isolated container.
 
 **STEP 1**
 
-Start a workbench with a Python 3, open a terminal window:
+Start a workbench with a Python 3 and run these commands in the prompt:
 
 ```
-chmod +x setup.sh
-./setup.sh
+!pip3 install scikit-learn
+!hadoop fs -put data/churn.txt /user/$HADOOP_USER_NAME
 ```
 
 **STEP 2** Examine `dsfortelco_sklearn_exp.py`
