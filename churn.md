@@ -1,4 +1,6 @@
-### Challenge
+# Experiments
+
+## Challenge
 
 As data scientists iteratively develop models, they often experiment with datasets, 
 features, libraries, algorithms, and parameters. 
@@ -13,7 +15,7 @@ track training artifacts (data, parameters, code, etc.), and even then it might 
 impossible to reproduce and explain a given result. This can lead to wasted 
 time/effort during collaboration, not to mention the compliance risks introduced.
 
-### Solution
+## Solution
 
 Starting with version 1.4, Cloudera Data Science Workbench uses experiments 
 to facilitate ad-hoc batch execution and model training. 
@@ -21,7 +23,7 @@ Experiments are batch executed workloads where the code, input parameters,
 and output artifacts are versioned. This feature also provides a lightweight 
 ability to track output data, including files, metrics, and metadata for comparison.
 
-### Concepts
+## Concepts
 
 The term experiment refers to a non interactive batch execution script that is 
 versioned across input parameters, project files, and output. 
@@ -30,9 +32,9 @@ or jobs) and have no notion of scheduling; they run at creation time.
 To support versioning of the project files and retain run-level artifacts 
 and metadata, each experiment is executed in an isolated container.
 
-### Instructions
+## Instructions
 
-**STEP 1**
+### STEP 1
 
 Start a workbench with a Python 3, at the prompt run:
 
@@ -40,7 +42,7 @@ Start a workbench with a Python 3, at the prompt run:
 !hdfs dfs -put data/churn.txt /user/$HADOOP_USER_NAME
 ```
 
-**STEP 2** Examine `dsfortelco_sklearn_exp.py`
+### STEP 2 Examine `dsfortelco_sklearn_exp.py`
 
 Open the file `dsfortelco_sklearn_exp.py`. This is a python program that builds a 
 churn model to predict customer churn (the likelihood that this customer is going 
@@ -97,7 +99,7 @@ cdsw.track_metric("ap", ap)
 These indicators will show up later in the **Experiments** dashboard.
 
 
-**STEP 3** Run the experiment for the first time
+### STEP 3 Run the experiment for the first time
 
 Now, run the experiment using the following parameters:
 
@@ -122,7 +124,7 @@ at the same time.
 
 In this example, 0.871. Not bad, but maybe there are better hyper parameter values available. 
 
-**STEP 4** : Re run the experiment several times
+### STEP 4 : Re run the experiment several times
 
 Now, re-run the experiment 3 more times and try different values for NumTrees and NumDepth.
 Try the following values:
@@ -137,7 +139,7 @@ NumTrees NumDepth
 When all runs have completed successfully, check which parameters had the best quality 
 (best predictive value). This is represented by the highest ‘area under the curve’, auroc metric.
 
-**STEP 5** : Save the best model to your environment
+### STEP 5 : Save the best model to your environment
 
 Select the run number with the best predictive value. In the Overview screen of the experiment, 
 you can see that the model in spark format, is captured in the file ‘sklearn_rf.pkl’. 
@@ -146,14 +148,14 @@ directory.
 
 
 
-### 2.3. Models
+# Models
 
 
 Starting with version 1.4, Cloudera Data Science Workbench allows data scientists to build, deploy, 
 and manage models as REST APIs to serve predictions.
 
 
-### Challenge
+## Challenge
 
 Data scientists often develop models using a variety of Python/R open source packages. 
 The challenge lies in actually exposing those models to stakeholders who can test the model. 
@@ -173,7 +175,7 @@ if needed. At any time, data scientists (or any other stakeholders) must have a 
 identify which version of a model is/was deployed.
 
 
-### Solution
+## Solution
 
 
 Starting with version 1.4, Cloudera Data Science Workbench allows data scientists to build and 
@@ -189,9 +191,9 @@ Save the model along with some metadata.
 Deploy a specified number of model API replicas, automatically load balanced.
 
 
-### Instructions
+## Instructions
 
-**STEP 1** : Examine the program `predic_churn_sklearn.py`
+### STEP 1 : Examine the program `predic_churn_sklearn.py`
 
 Open the project you created in the previous lab, and examine the file. This PySpark program uses 
 the pickle.load mechanism to deploy models. The model it refers to the `sklearn_rf.pkl` file, was 
@@ -201,7 +203,7 @@ There is a predict definition which is the function that calls the model, using 
 and will return a result variable.
 
 
-**STEP 2** : Deploy the model
+### STEP 2 : Deploy the model
 
 From the projects page of your project, select the ‘Models’ button. Select ‘New Model’, and populate 
 specify the following configuration:
@@ -224,7 +226,7 @@ If all parameters are set, you can hit the ‘Deploy Model’ button. Wait till 
 This will take several minutes.
 
 
-**STEP 3** : Test the deployed model
+### STEP 3 : Test the deployed model
 
 After the several minutes, your model should get to the ‘Deployed’ state. Now, click on the Model 
 Name link, to go to the Model Overview page. From the that page, hit the ‘Test’ button to check 
