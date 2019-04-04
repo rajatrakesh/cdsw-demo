@@ -4,11 +4,6 @@ Basic tour of Cloudera Data Science Workbench (CDSW).
 
 ## Initial setup
 
-Open the Workbench and start a new Python2 Session, then run the following command to install some required libraries:
-```
-!pip2 install --upgrade pip dask keras matplotlib pandas_highcharts protobuf tensorflow seaborn sklearn
-```
-
 Open the Workbench and start a Python3 Session, then run the following command to install some required libraries:
 ```
 !pip3 install --upgrade pip dask keras matplotlib pandas_highcharts protobuf tensorflow seaborn sklearn
