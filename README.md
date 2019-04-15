@@ -23,3 +23,4 @@ install.packages('shiny')
 
 Stop and restart all sessions for changes to take effect.
 
+Want more Experiment and Models examples? Check our (secret excercise)[Experiment-and-Models.md] 
